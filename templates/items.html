@@ -1,0 +1,23 @@
+<div>
+  {% for key, item in menu_dict.items() %}
+  <h4 class="border-bottom row"
+    style="color:rgb(180, 180, 180);margin-bottom:5px;
+    margin-top:15px;">
+    {{key}}
+  </h4>
+    {% for entry in item %}
+  <div class="row">
+  <div class="col-9" style="margin-bottom:12px;">
+    <div>{{entry['title']}}</div>
+    <div style="font-size: 12px;">
+      <b>Price:</b> 
+      {{entry['price']}}
+    </div>
+  </div>
+  <div class="col-3">
+    <button type="button" class="btn btn-outline-success btn-sm">Add</button>
+  </div>
+  </div>
+  {% endfor %}
+{% endfor %}
+</div>
